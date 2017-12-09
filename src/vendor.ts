@@ -1,3 +1,5 @@
+// webpack uses this file to make sure my source code isn't bundled with vendor code
+
 // angular
 import '@angular/core';
 import '@angular/common';
