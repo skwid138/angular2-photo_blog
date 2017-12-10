@@ -9,5 +9,7 @@ import { Injectable } from "@angular/core";
 
 // export service
 export class EntryService {
+    getEntries() {
 
-}
+    } // end getEntries
+} // end export

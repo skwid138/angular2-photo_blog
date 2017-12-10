@@ -14,12 +14,17 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 // import all components inside the entries directory using index.ts (barrel)
-import { EntryListComponent, EntryComponent } from './entries';
+import { EntryListComponent, EntryComponent, EntryService } from './entries';
 
 
 // this is called a decorator
 @NgModule({
-    imports: [BrowserModule, HttpModule],
+    imports: [
+        BrowserModule, 
+        HttpModule
+    ],
+    // the providers property is designed to hold services
+    providers: [EntryService],
     // all components must be entered into declarations
     declarations: [
         AppComponent,
