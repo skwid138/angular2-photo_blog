@@ -21,7 +21,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppComponent } from './app.component';
 
 // import all components inside the entries directory using index.ts (barrel)
-import { EntryListComponent, EntryComponent, EntryService } from './entries';
+import { EntryListComponent, EntryComponent, EntryCommentFormComponent, EntryService } from './entries';
 
 // import in memory entry service from backend file
 import { InMemoryEntryService } from './backend';
@@ -48,7 +48,8 @@ import { InMemoryEntryService } from './backend';
         // must still be listed here
         // child components must be entered first
         EntryComponent,
-        EntryListComponent
+        EntryListComponent,
+        EntryCommentFormComponent
     ],
     // collection of top level components generally there is only one per application
     bootstrap: [AppComponent]

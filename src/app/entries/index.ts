@@ -10,5 +10,8 @@ export * from './entry-list/entry-list.component';
 // export entry component
 export * from './entry/entry.component';
 
+// export entry comment form component
+export * from './entry/entry-comment-form.component';
+
 // export entry service
 export * from './shared/entry.service';
