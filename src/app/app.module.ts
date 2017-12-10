@@ -1,4 +1,5 @@
 // root module of app
+// similar to client.js in my angularJS apps
 
 // NgModule is the foundation of Angular and is required at least once for Angular to work
 import { NgModule } from '@angular/core';
@@ -8,11 +9,18 @@ import { BrowserModule } from '@angular/platform-browser';
 //import app components into app module
 import { AppComponent } from './app.component';
 
+// import all components inside the entries directory using index.ts (barrel)
+import { EntryListComponent } from './entries';
+
+
 // this is called a decorator
 @NgModule({
     imports: [BrowserModule],
     // all components must be entered into declarations
-    declarations: [AppComponent],
+    declarations: [
+        AppComponent,
+        EntryListComponent
+    ],
     // collection of top level components generally there is only one per application
     bootstrap: [AppComponent]
 })
