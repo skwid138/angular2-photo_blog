@@ -1,5 +1,5 @@
 // import component decorator from angular core
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 // import Entry model
 import { Entry } from '../shared/entry.model';
@@ -17,6 +17,7 @@ import { Entry } from '../shared/entry.model';
 
 // export component
 export class EntryComponent {
-    // variables to be displayed on the DOM
-    entry: Entry;
+    // variables to be displayed on the 
+    // DOM using @Input decorator
+    @Input() entry: Entry;
 } // end export
