@@ -6,6 +6,9 @@ import { NgModule } from '@angular/core';
 // BrowserModule is browser specific features
 import { BrowserModule } from '@angular/platform-browser';
 
+//import http module for making requests to server
+import { HttpModule } from '@angular/http';
+
 //import app components into app module
 import { AppComponent } from './app.component';
 
@@ -15,7 +18,7 @@ import { EntryListComponent, EntryComponent } from './entries';
 
 // this is called a decorator
 @NgModule({
-    imports: [BrowserModule],
+    imports: [BrowserModule, HttpModule],
     // all components must be entered into declarations
     declarations: [
         AppComponent,
