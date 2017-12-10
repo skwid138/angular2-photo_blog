@@ -20,12 +20,20 @@ import { AppComponent } from './app.component';
 // import all components inside the entries directory using index.ts (barrel)
 import { EntryListComponent, EntryComponent, EntryService } from './entries';
 
+// import in memory entry service from backend file
+import { InMemoryEntryService } from './backend';
+
 
 // this is called a decorator
 @NgModule({
+    // imports is only for Angular modules and not JavaScript modules
     imports: [
         BrowserModule, 
-        HttpModule
+        HttpModule,
+        // registers these modules components and services for use
+        // this should not be used in a production setting, 
+        // but is great for educational or test environments
+        InMemoryWebApiModule.forRoot(InMemoryEntryService)
     ],
     // the providers property is designed to hold services
     providers: [EntryService],
