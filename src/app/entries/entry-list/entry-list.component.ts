@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
 @Component({
     // html target - should be kebab case
     selector: 'app-entry-list',
-    // view
+    // html view
     templateUrl: 'entry-list.component.html',
     // stylesheet
     styleUrls: ['entry-list.component.css']

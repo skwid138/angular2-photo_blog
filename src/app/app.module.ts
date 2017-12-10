@@ -10,7 +10,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 // import all components inside the entries directory using index.ts (barrel)
-import { EntryListComponent } from './entries';
+import { EntryListComponent, EntryComponent } from './entries';
 
 
 // this is called a decorator
@@ -19,6 +19,10 @@ import { EntryListComponent } from './entries';
     // all components must be entered into declarations
     declarations: [
         AppComponent,
+        // when using a barrel components 
+        // must still be listed here
+        // child components must be entered first
+        EntryComponent,
         EntryListComponent
     ],
     // collection of top level components generally there is only one per application
