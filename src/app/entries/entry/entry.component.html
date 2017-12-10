@@ -1,17 +1,17 @@
-<h2>{{title}}</h2>
+<h2>{{entry.title}}</h2>
 <!-- figure is used to contain images and ilustrations -->
 <figure>
     <img src="{{photo}}"/>
-    <figcaption>{{description}}</figcaption>
+    <figcaption>{{entry.description}}</figcaption>
 </figure>
 <div class="actions">
     <button type="button" (click)="isLiked = !isLiked" [ngClass]="{liked: isLiked}">❤</button>
-    <button type="button" (click)="showComments = !showComments">Comments: {{comments.length}}</button>
+    <button type="button" (click)="showComments = !showComments">Comments: {{entry.comments.length}}</button>
 </div>
 <div class="comments" *ngIf="showComments">
     <!-- ngFor replaces ng-repeat and uses a for in loop instead of indexing -->
     <!-- prefixing ngFor with an * declares the current element as the base for the loop -->
-    <div class="comment" *ngFor="let comment of comments">
+    <div class="comment" *ngFor="let comment of entry.comments">
         <p><strong>{{comment.name}}</strong> {{comment.comment}}</p>
     </div>
 </div>
