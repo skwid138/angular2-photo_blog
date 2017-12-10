@@ -9,5 +9,7 @@ import { Component } from '@angular/core';
 
 //export class
 export class EntryCommentFormComponent {
+    name: string = '';
+    comment: string = ''; 
 
 } // end export
