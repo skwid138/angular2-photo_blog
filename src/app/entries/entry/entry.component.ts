@@ -13,5 +13,9 @@ import { Component } from "@angular/core";
 
 // export component
 export class EntryComponent {
+    // variables to be displayed on the DOM
+    title: string = 'My First Photo';
+    photo: string = 'http://placehold.it/800x500?text=Angular Basics';
+    description: string = 'A Description of My First Photo';
 
 } // end export
