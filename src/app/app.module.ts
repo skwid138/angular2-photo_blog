@@ -10,6 +10,9 @@ import { BrowserModule } from '@angular/platform-browser';
 //import http module for making requests to server
 import { HttpModule } from '@angular/http';
 
+//import forms module
+import { FormsModule } from '@angular/forms';
+
 // import angular in memory web api module
 // connects in memory service with http service
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -30,6 +33,7 @@ import { InMemoryEntryService } from './backend';
     imports: [
         BrowserModule, 
         HttpModule,
+        FormsModule,
         // registers these modules components and services for use
         // this should not be used in a production setting, 
         // but is great for educational or test environments
