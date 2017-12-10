@@ -4,8 +4,11 @@
 
 // it helps avoid having to import each component into the app.module
 
-// export entry-list
+// export entry-list component
 export * from './entry-list/entry-list.component';
 
-// export entry
-export * from './entry/entry.component'
+// export entry component
+export * from './entry/entry.component';
+
+// export entry service
+export * from './shared/entry.service';
