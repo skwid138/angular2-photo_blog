@@ -10,6 +10,10 @@ import { BrowserModule } from '@angular/platform-browser';
 //import http module for making requests to server
 import { HttpModule } from '@angular/http';
 
+// import angular in memory web api module
+// connects in memory service with http service
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+
 //import app components into app module
 import { AppComponent } from './app.component';
 
