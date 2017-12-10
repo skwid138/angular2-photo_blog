@@ -1,0 +1,34 @@
+figure {
+    margin: 0;
+    border: 1px solid #000;
+    /* relative position so caption is positioned properly */
+    position: relative;
+}
+
+figcaption {
+    /* transparent background w/ white text */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px;
+    /* at bottom of parent element */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+img {
+    /* make photo fit in parent element */
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* add margin to outer app entry element */
+/* https://www.w3.org/TR/css-scoping-1/#host-selector */
+:host {
+    padding: 1em;
+    /* because app-entry is a custom element it's inline by default */
+    display: block;
+}

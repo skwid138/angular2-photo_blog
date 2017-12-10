@@ -7,7 +7,8 @@ import { Component } from "@angular/core";
     selector: 'app-entry',
     // html view
     templateUrl: 'entry.component.html',
-    // stylesheet
+    // stylesheet - changes to elements only 
+    // effect what's on this components html
     styleUrls: ['entry.component.css']
 }) // end component decorator
 
