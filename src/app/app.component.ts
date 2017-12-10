@@ -14,4 +14,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
     // emoji is an array of strings
     emoji: string[] = ['🎉', '😍', '😜', '👍'];
+    // no initial value is being declared so a type must be specified
+    activeEmoji: string;
+    // on click function from html
+    changeEmoji() {
+        this.activeEmoji = this.emoji[Math.floor(Math.random() * this.emoji.length)];
+    } // end changeEmoji
 }
