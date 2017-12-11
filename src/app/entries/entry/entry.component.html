@@ -17,5 +17,6 @@
     <!-- form component -->
     <!-- event handler to emit data between components -->
     <!-- $event is the value emitted by the child even emitter -->
-    <app-entry-comment-form (onCommentAdded)="onCommentAdded($event)"></app-entry-comment-form>
+    <!-- entryId value is being set to the object.id properties value on the object that's being looped through -->
+    <app-entry-comment-form (onCommentAdded)="onCommentAdded($event)" [entryId]="entry.id"></app-entry-comment-form>
 </div>

@@ -22,6 +22,12 @@ export class EntryService {
 
     } // end constructor
 
+    // post the comment data to the server and return a promise
+    addComment(entryId: number, comment: {name: string; comment: string; }) {
+        return this.http.post('/app/entries/${entryId}/comments', comment)
+            .toPromise();
+    } // end addComment
+
     // defining return to be a promise with an array of Entrys
     // this is known as a generic type which is a type within a type
     // a promise type containing an array of entry types
