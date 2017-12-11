@@ -40,6 +40,11 @@ export class EntryCommentFormComponent {
 
     // binding for form submission
     onSubmit(commentForm: NgForm) {
+
+        // if form inputs are invalid return instead of 
+        // executing any further code
+        if(this.commentForm.invalid) return;
+
         let comment = { name: this.name, comment: this.comment};
         // call add comment from entry service
         this.entryService.addComment(this.entryId, comment)

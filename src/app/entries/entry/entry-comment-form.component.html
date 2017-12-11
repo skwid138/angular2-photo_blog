@@ -1,15 +1,27 @@
 <!-- angular will use the ng form directive from the forms module that is installed -->
 <!-- to asign a local variable use #[name]= -->
-<form (submit)="onSubmit()" #commentForm="ngForm"> 
+<!-- the novalidate attribute disables the built in form validation -->
+<form (submit)="onSubmit()" #commentForm="ngForm" novalidate> 
     <div>
         <label for="name">Name</label>
         <!-- two way data binding is shown by [(ngModel)]="variable" -->
         <!-- putting required uses the built in functionality of html to stop the form from being submitted empty -->
-        <input type="text" name="name" [(ngModel)]="name" required minlength="3"/>
+        <input type="text" name="name" [(ngModel)]="name" required minlength="3" #nameField="ngModel" />
+        <!-- alert and alert danger are not specific to angular -->
+        <!-- if the name field has changed or a user has touched it and it has errors show the div -->
+        <div class="alert alert-danger" *ngIf="(commentForm.submitted || nameField.dirty || nameField.touched) && nameField.errors">
+            <!-- hidden will evaluate to true while the filed does not have an error -->
+            <div [hidden]="!nameField.errors.required">Name is required!</div>
+            <div [hidden]="!nameField.errors.minlength">Come on your name is less than two characters? It has be at least 3 characters!</div>
+        </div>
     </div>
     <div>
         <label for="comment">Comment</label>
-        <textarea name="comment" [(ngModel)]="comment" required minlength="3" ></textarea>
+        <textarea name="comment" [(ngModel)]="comment" required minlength="3" #commentField="ngModel" ></textarea>
+        <div class="alert alert-danger" *ngIf="(commentForm.submitted || commentField.dirty || commentField.touched) && commentField.errors">
+            <div [hidden]="!commentField.errors.required">A Comment is required!</div>
+            <div [hidden]="!commentField.errors.minlength">You can write a longer comment then that! How about at least 3 characters?</div>
+        </div>
     </div>
     <div>
         <button >Submit</button>
