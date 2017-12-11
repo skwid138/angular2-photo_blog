@@ -12,4 +12,8 @@ export class EntryCommentFormComponent {
     name: string = '';
     comment: string = ''; 
 
+    // binding for form submission
+    onSubmit() {
+        debugger;
+    }
 } // end export

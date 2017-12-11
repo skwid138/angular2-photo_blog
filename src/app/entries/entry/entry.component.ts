@@ -20,4 +20,9 @@ export class EntryComponent {
     // variables to be displayed on the 
     // DOM using @Input decorator
     @Input() entry: Entry;
+
+    // defining the type like this is known as an inline definition
+    onCommentAdded(comment: {name: string; comment: string;}) {
+        this.entry.comments.push(comment);
+    } // end onCommentAdded
 } // end export

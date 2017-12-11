@@ -1,5 +1,5 @@
 <!-- angular will use the ng form directive from the forms module that is installed -->
-<form>
+<form (submit)="onSubmit()"> 
     <div>
         <label for="name">Name</label>
         <!-- two way data binding is shown by [(ngModel)]="variable" -->
@@ -10,6 +10,6 @@
         <textarea name="comment" [(ngModel)]="comment"></textarea>
     </div>
     <div>
-        <button>Submit</button>
+        <button >Submit</button>
     </div>
 </form>
