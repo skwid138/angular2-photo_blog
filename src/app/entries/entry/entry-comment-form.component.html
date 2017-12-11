@@ -4,11 +4,12 @@
     <div>
         <label for="name">Name</label>
         <!-- two way data binding is shown by [(ngModel)]="variable" -->
-        <input type="text" name="name" [(ngModel)]="name"/>
+        <!-- putting required uses the built in functionality of html to stop the form from being submitted empty -->
+        <input type="text" name="name" [(ngModel)]="name" required minlength="3"/>
     </div>
     <div>
         <label for="comment">Comment</label>
-        <textarea name="comment" [(ngModel)]="comment"></textarea>
+        <textarea name="comment" [(ngModel)]="comment" required minlength="3" ></textarea>
     </div>
     <div>
         <button >Submit</button>
