@@ -1,5 +1,6 @@
 <!-- angular will use the ng form directive from the forms module that is installed -->
-<form (submit)="onSubmit()"> 
+<!-- to asign a local variable use #[name]= -->
+<form (submit)="onSubmit()" #commentForm="ngForm"> 
     <div>
         <label for="name">Name</label>
         <!-- two way data binding is shown by [(ngModel)]="variable" -->
